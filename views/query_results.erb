@@ -1,0 +1,26 @@
+<section class="table-wrapper">
+  <table id="table" class="tablesorter">
+    <thead>
+      <tr>
+        <th>metro area</th>
+        <th>state</th>
+        <th>2010 population</th>
+        <th>square miles</th>
+        <th>weighted density</th>
+        <th>10yr density change</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @metro_query.each do |population| %>
+        <tr>
+          <td><%= population[:geographic_area][0..35] %></td>
+          <td><%= population[:state] %></td>
+          <td><%= population[:pop_2010] %></td>
+          <td><%= population[:sq_miles] %></td>
+          <td><%= population[:weighted_density_2010] %></td>
+          <td><%= population[:density_change] %></td>
+        </tr>
+        <% end %>
+    </tbody>
+  </table>
+</section>

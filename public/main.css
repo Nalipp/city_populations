@@ -1,0 +1,146 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: monospace,"Courier New",Courier,"Lucida Sans Typewriter","Lucida Typewriter";
+  color: grey;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  border: 2px solid grey;
+  border-radius: 20px;
+  padding: 4px 20px;
+}
+
+section.main {
+  border-top: 6px solid grey;
+  padding-top: 20px;
+  margin-top: 40px;
+}
+
+.table-wrapper {
+  margin-bottom: 100px;
+}
+
+h1 {
+  font-size: 3em;
+  background-color: grey;
+  color: white;
+  padding: 20px 50px;
+}
+
+header h2 {
+  font-size: 1.2em;
+  padding: 20px 50px;
+  line-height: 40px;
+}
+
+h3 {
+  font-size: 1em;
+  padding: 20px 50px;
+}
+
+.pop_select {
+  margin-top: 40px;
+  text-align: center;
+  padding: 10px;
+}
+
+.pop_select a {
+  margin-right: 10px;
+}
+
+footer {
+  height: 140px;
+  background-color: grey;
+}
+
+input[type='checkbox']:checked {
+  background: black;
+}
+
+input[type='checkbox']:focus {
+  outline: none;
+}
+
+form button {
+  text-decoration: none;
+  color: black;
+  border: 2px solid grey;
+  border-radius: 20px;
+  padding: 8px 40px;
+  background-color: white;
+  font-size:1.4em;
+  margin-top: 40px;
+}
+
+form {
+  -webkit-touch-callout: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+
+label a {
+  display: inline-block;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+input[type='text'] {
+  font-size: 26px;
+  color: grey;
+  padding: 10px;
+  border: 2px solid grey;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+/* tables */
+
+table {
+  margin: 50px 50px;
+  text-align: left;
+}
+
+table tr th {
+  padding: 40px 16px 20px 0;
+  font-size: 20px;
+  text-align: center;
+  border-top: 2px solid grey;
+  border-bottom: 2px solid grey;
+  border-right: 2px dotted grey;
+}
+
+table tr th:first-child {
+  border-left: 2px dotted grey;
+}
+
+table tr td {
+  padding-left: 20px;
+  border-bottom: 2px solid grey;
+  border-right: 2px dotted grey;
+}
+
+table tr td:first-child {
+  border-left: 2px dotted grey;
+  width: 350px;
+}
+
+table tr td:nth-child(n+3) {
+  text-align: right;
+  padding-right: 30px;
+}
+
+/* tablesorter  */
+
+table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSortUp {
+  background-color: #8dbdd8;
+}
