@@ -1,7 +1,7 @@
 require "sequel"
 
 class SequelPersistence
-  DB = Sequel.connect("postgres://localhost/cbsa")
+  DB = Sequel.connect(ENV['DATABASE_URL'] || 'postgres://localhost/cbsa')
 
   DB.disconnect
 
