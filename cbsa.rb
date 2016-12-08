@@ -5,8 +5,6 @@ require "tilt/erubis"
 require_relative "sequel_persistence"
 
 configure do
-  enable :sessions
-  set :session_secret, "secret"
   set :erb, escape_html: true
   set :port, 8787
 end

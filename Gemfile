@@ -7,6 +7,5 @@ gem "erubis"
 gem "sequel"
 
 group :production do
-  gem "pg"
   gem "puma"
 end
