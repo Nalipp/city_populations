@@ -1,3 +1,5 @@
+require "pry"
+
 require "sinatra"
 require "sinatra/content_for"
 require "tilt/erubis"
@@ -29,11 +31,26 @@ get "/population_form" do
   erb :query_results, layout: :layout
 end
 
-post "/population_form" do
-  if params.empty?
-    @metro_query = @storage.all_populatations
+def format_range(range)
+  if range.include?(' ')
+    range_arr = range.split(' ')
+  elsif range.include?('-')
+    range_arr = range.split('-')
   else
+    #range error
+  end
+  range_nums = range_arr.map { |str| str.gsub(/\D/, '').to_i }
+end
+
+post "/population_form" do
+  if params[:custom_range] && params[:custom_range].empty? != true
+    range = format_range(params[:custom_range])
+    @metro_query = @storage.custom_range(range)
+  elsif params.values.include?('on')
+    params.delete("custom_range")
     @metro_query = @storage.custom_population_query(params)
+  else
+    @metro_query = @storage.all_populatations
   end
   erb :query_results, layout: :layout
 end

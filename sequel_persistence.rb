@@ -29,6 +29,10 @@ class SequelPersistence
     DB[:metro_area].where(:pop_2010 => 1000001..100000000).all
   end
 
+  def custom_range(range)
+    DB[:metro_area].where(:pop_2010 => "#{range[0]}".to_i.."#{range[1]}".to_i).all
+  end
+
   def custom_population_query(params)
     population_ranges = []
 

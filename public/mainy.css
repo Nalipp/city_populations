@@ -16,8 +16,21 @@ a {
   padding: 4px 20px;
 }
 
+header {
+  background: #6EBED7;
+  color: white;
+  text-shadow: -1px 0 grey, 0 1px grey, 1px 0 grey, 0 -1px grey;
+}
+
+header a {
+  border: none;
+  color: grey;
+  text-shadow: -0.5px 0 white, 0 0.5px white, 0.5px 0 white, 0 -0.5px white;
+  text-decoration: underline;
+  padding: 0;
+}
+
 section.main {
-  border-top: 6px solid grey;
   padding-top: 20px;
   margin-top: 40px;
 }
@@ -34,14 +47,14 @@ h1 {
 }
 
 header h2 {
-  font-size: 1.2em;
-  padding: 20px 50px;
+  font-size: 24px;
+  padding: 20px 50px 10px 50px;
   line-height: 40px;
 }
 
 h3 {
-  font-size: 1em;
-  padding: 20px 50px;
+  font-size: 20px;
+  padding: 10px 50px 20px 50px;
 }
 
 .pop_select {
@@ -103,6 +116,11 @@ input[type='text'] {
   margin-bottom: 20px;
 }
 
+input[type='text']:focus {
+  background: #eee;
+  outline: none !important;
+}
+
 /* tables */
 
 table {
@@ -139,7 +157,7 @@ table tr td:nth-child(n+3) {
   padding-right: 30px;
 }
 
-/* tablesorter  */
+/* tablesorter  jQuery plugin http://tablesorter.com/docs/#Download */
 
 table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSortUp {
   background-color: #8dbdd8;

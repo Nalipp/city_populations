@@ -3,22 +3,15 @@
   <head>
     <meta charset="utf-8">
     <title>US cities population density</title>
-    <link rel="stylesheet" href="/main.css" media="screen" title="no title">
+    <link rel="stylesheet" href="/mainy.css" media="screen" title="no title">
     <script type="text/javascript" src="/javascripts/jquery.js"></script>
     <script type="text/javascript" src="/javascripts/tablesorter/jquery.tablesorter.js"></script>
-      <!-- jQuery plugin http://tablesorter.com/docs/#Download -->
-    <script type="text/javascript">
-      $(document).ready(function() {
-          $("table").tablesorter({
-              sortList: [[0,0],[2,0]]
-          });
-      });
-    </script>
+    <script src="javascripts/tablesorter.js"></script>
   </head>
   <body>
     <header>
       <h1>US cities population density</h1>
-      <h2>Analyzing city population areas <br /><a href="https://en.wikipedia.org/wiki/Core-based_statistical_area" target="_blank">core-based statistical areas</a></h2>
+      <h2>analyze city population areas <a href="https://en.wikipedia.org/wiki/Core-based_statistical_area" target="_blank">core-based statistical areas</a></h2>
       <h3>download <a href="http://www.census.gov/population/metro/data/pop_data.html" target="_blank">csv datasests</a> from the US Cenus Bureau or <a href="https://data2.nhgis.org/main" target="_blank">nhgis</a> </h3>
     </header>
     <section role="main" class="main">
@@ -29,9 +22,12 @@
           <label><a><input type="checkbox" name="between_500k_1mil"> 500k - 1mil people</a></label>
           <label><a><input type="checkbox" name="more_than_1mil"> 1mil+ people</a></label>
           <br />
-          <label><input type="text" name="custom_range" placeholder="e.g.  5200000 - 8000000"> custom range</label>
+          <label><input type="text" name="custom_range" placeholder="custom range"> e.g. 5200000-8000000</label>
           <br />
           <button type="submit">Submit</button>
+        </form>
+        <form action="population_form" method="post">
+          <button type="submit">Reset</button>
         </form>
       </div>
     </section>
